@@ -13,9 +13,12 @@
 		CE66FE9D269D6BA30012F465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE66FE9B269D6BA30012F465 /* Main.storyboard */; };
 		CE66FE9F269D6BA50012F465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE66FE9E269D6BA50012F465 /* Assets.xcassets */; };
 		CE66FEA2269D6BA50012F465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE66FEA0269D6BA50012F465 /* LaunchScreen.storyboard */; };
+		DFC2BBB8B2C11F4A8188DC74 /* Pods_FiltersCameraMeetUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1D63372E2EE62009E357FE /* Pods_FiltersCameraMeetUp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F1D63372E2EE62009E357FE /* Pods_FiltersCameraMeetUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiltersCameraMeetUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B71F8D376526B0A6AD6CCC9 /* Pods-FiltersCameraMeetUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiltersCameraMeetUp.release.xcconfig"; path = "Target Support Files/Pods-FiltersCameraMeetUp/Pods-FiltersCameraMeetUp.release.xcconfig"; sourceTree = "<group>"; };
 		CE66FE92269D6BA30012F465 /* FiltersCameraMeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiltersCameraMeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE66FE95269D6BA30012F465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE66FE97269D6BA30012F465 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		CE66FE9E269D6BA50012F465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE66FEA1269D6BA50012F465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE66FEA3269D6BA50012F465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D94950573950B4EBE3000B9A /* Pods-FiltersCameraMeetUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiltersCameraMeetUp.debug.xcconfig"; path = "Target Support Files/Pods-FiltersCameraMeetUp/Pods-FiltersCameraMeetUp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC2BBB8B2C11F4A8188DC74 /* Pods_FiltersCameraMeetUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				CE66FE94269D6BA30012F465 /* FiltersCameraMeetUp */,
 				CE66FE93269D6BA30012F465 /* Products */,
+				FDFF142BD3EBE84041FB18EE /* Pods */,
+				DD0C49A456EA14F2CC727A60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = FiltersCameraMeetUp;
 			sourceTree = "<group>";
 		};
+		DD0C49A456EA14F2CC727A60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F1D63372E2EE62009E357FE /* Pods_FiltersCameraMeetUp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDFF142BD3EBE84041FB18EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D94950573950B4EBE3000B9A /* Pods-FiltersCameraMeetUp.debug.xcconfig */,
+				8B71F8D376526B0A6AD6CCC9 /* Pods-FiltersCameraMeetUp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE66FEA6269D6BA50012F465 /* Build configuration list for PBXNativeTarget "FiltersCameraMeetUp" */;
 			buildPhases = (
+				FCD5531BE14320E61EBCB2AA /* [CP] Check Pods Manifest.lock */,
+				CE66FEA9269D6D830012F465 /* ShellScript */,
 				CE66FE8E269D6BA30012F465 /* Sources */,
 				CE66FE8F269D6BA30012F465 /* Frameworks */,
 				CE66FE90269D6BA30012F465 /* Resources */,
@@ -131,6 +157,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE66FEA9269D6D830012F465 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		FCD5531BE14320E61EBCB2AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FiltersCameraMeetUp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE66FE8E269D6BA30012F465 /* Sources */ = {
@@ -283,39 +351,45 @@
 		};
 		CE66FEA7269D6BA50012F465 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D94950573950B4EBE3000B9A /* Pods-FiltersCameraMeetUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7S522SQRV;
 				INFOPLIST_FILE = FiltersCameraMeetUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vironit.FiltersCameraMeetUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CE66FEA8269D6BA50012F465 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B71F8D376526B0A6AD6CCC9 /* Pods-FiltersCameraMeetUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L7S522SQRV;
 				INFOPLIST_FILE = FiltersCameraMeetUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vironit.FiltersCameraMeetUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -16,6 +16,7 @@
 		CE66FEB0269D921B0012F465 /* CameraAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66FEAF269D921B0012F465 /* CameraAuthorizationManager.swift */; };
 		CE66FEB3269DA7550012F465 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE66FEB2269DA7550012F465 /* Camera.storyboard */; };
 		CE66FEB5269DAE460012F465 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66FEB4269DAE460012F465 /* CameraViewController.swift */; };
+		CE66FEB7269DB2E70012F465 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66FEB6269DB2E60012F465 /* SessionManager.swift */; };
 		DFC2BBB8B2C11F4A8188DC74 /* Pods_FiltersCameraMeetUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1D63372E2EE62009E357FE /* Pods_FiltersCameraMeetUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		CE66FEAF269D921B0012F465 /* CameraAuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraAuthorizationManager.swift; sourceTree = "<group>"; };
 		CE66FEB2269DA7550012F465 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		CE66FEB4269DAE460012F465 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		CE66FEB6269DB2E60012F465 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		D94950573950B4EBE3000B9A /* Pods-FiltersCameraMeetUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiltersCameraMeetUp.debug.xcconfig"; path = "Target Support Files/Pods-FiltersCameraMeetUp/Pods-FiltersCameraMeetUp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				CE66FEA0269D6BA50012F465 /* LaunchScreen.storyboard */,
+				CE66FEB6269DB2E60012F465 /* SessionManager.swift */,
 				CE66FEAF269D921B0012F465 /* CameraAuthorizationManager.swift */,
 				CE66FEB1269DA7390012F465 /* Camera */,
 				CE66FEAC269D8AA70012F465 /* Main */,
@@ -257,6 +260,7 @@
 			files = (
 				CE66FEB0269D921B0012F465 /* CameraAuthorizationManager.swift in Sources */,
 				CE66FEB5269DAE460012F465 /* CameraViewController.swift in Sources */,
+				CE66FEB7269DB2E70012F465 /* SessionManager.swift in Sources */,
 				CE66FE9A269D6BA30012F465 /* MainViewController.swift in Sources */,
 				CE66FE96269D6BA30012F465 /* AppDelegate.swift in Sources */,
 				CE66FE98269D6BA30012F465 /* SceneDelegate.swift in Sources */,

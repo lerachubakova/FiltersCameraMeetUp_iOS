@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		CE66FE96269D6BA30012F465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66FE95269D6BA30012F465 /* AppDelegate.swift */; };
 		CE66FE98269D6BA30012F465 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66FE97269D6BA30012F465 /* SceneDelegate.swift */; };
-		CE66FE9A269D6BA30012F465 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66FE99269D6BA30012F465 /* ViewController.swift */; };
+		CE66FE9A269D6BA30012F465 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66FE99269D6BA30012F465 /* MainViewController.swift */; };
 		CE66FE9D269D6BA30012F465 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE66FE9B269D6BA30012F465 /* Main.storyboard */; };
 		CE66FE9F269D6BA50012F465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE66FE9E269D6BA50012F465 /* Assets.xcassets */; };
 		CE66FEA2269D6BA50012F465 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE66FEA0269D6BA50012F465 /* LaunchScreen.storyboard */; };
+		CE66FEB0269D921B0012F465 /* CameraAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66FEAF269D921B0012F465 /* CameraAuthorizationManager.swift */; };
+		CE66FEB3269DA7550012F465 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE66FEB2269DA7550012F465 /* Camera.storyboard */; };
+		CE66FEB5269DAE460012F465 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66FEB4269DAE460012F465 /* CameraViewController.swift */; };
 		DFC2BBB8B2C11F4A8188DC74 /* Pods_FiltersCameraMeetUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1D63372E2EE62009E357FE /* Pods_FiltersCameraMeetUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,11 +25,14 @@
 		CE66FE92269D6BA30012F465 /* FiltersCameraMeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiltersCameraMeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE66FE95269D6BA30012F465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE66FE97269D6BA30012F465 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE66FE99269D6BA30012F465 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE66FE99269D6BA30012F465 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE66FE9C269D6BA30012F465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE66FE9E269D6BA50012F465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE66FEA1269D6BA50012F465 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE66FEA3269D6BA50012F465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE66FEAF269D921B0012F465 /* CameraAuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraAuthorizationManager.swift; sourceTree = "<group>"; };
+		CE66FEB2269DA7550012F465 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		CE66FEB4269DAE460012F465 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		D94950573950B4EBE3000B9A /* Pods-FiltersCameraMeetUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiltersCameraMeetUp.debug.xcconfig"; path = "Target Support Files/Pods-FiltersCameraMeetUp/Pods-FiltersCameraMeetUp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				CE66FEA0269D6BA50012F465 /* LaunchScreen.storyboard */,
+				CE66FEAF269D921B0012F465 /* CameraAuthorizationManager.swift */,
+				CE66FEB1269DA7390012F465 /* Camera */,
 				CE66FEAC269D8AA70012F465 /* Main */,
 			);
 			path = Modules;
@@ -93,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				CE66FE9B269D6BA30012F465 /* Main.storyboard */,
-				CE66FE99269D6BA30012F465 /* ViewController.swift */,
+				CE66FE99269D6BA30012F465 /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -104,6 +112,15 @@
 				CE66FE9E269D6BA50012F465 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE66FEB1269DA7390012F465 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				CE66FEB2269DA7550012F465 /* Camera.storyboard */,
+				CE66FEB4269DAE460012F465 /* CameraViewController.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		DD0C49A456EA14F2CC727A60 /* Frameworks */ = {
@@ -183,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE66FEA2269D6BA50012F465 /* LaunchScreen.storyboard in Resources */,
+				CE66FEB3269DA7550012F465 /* Camera.storyboard in Resources */,
 				CE66FE9F269D6BA50012F465 /* Assets.xcassets in Resources */,
 				CE66FE9D269D6BA30012F465 /* Main.storyboard in Resources */,
 			);
@@ -237,7 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE66FE9A269D6BA30012F465 /* ViewController.swift in Sources */,
+				CE66FEB0269D921B0012F465 /* CameraAuthorizationManager.swift in Sources */,
+				CE66FEB5269DAE460012F465 /* CameraViewController.swift in Sources */,
+				CE66FE9A269D6BA30012F465 /* MainViewController.swift in Sources */,
 				CE66FE96269D6BA30012F465 /* AppDelegate.swift in Sources */,
 				CE66FE98269D6BA30012F465 /* SceneDelegate.swift in Sources */,
 			);
@@ -316,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -371,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

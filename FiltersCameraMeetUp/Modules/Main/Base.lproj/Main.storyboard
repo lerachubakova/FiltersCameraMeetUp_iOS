@@ -1,24 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zKp-Zg-kLN">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AllowCameraViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="FiltersCameraMeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzD-Bf-TaP">
+                                <rect key="frame" x="64.333333333333343" y="345" width="299.33333333333326" height="290"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Rm6-oJ-qFw">
+                                        <rect key="frame" x="104.66666666666669" y="31" width="90" height="62.666666666666671"/>
+                                        <color key="tintColor" red="0.28438220003052406" green="0.26864741293240113" blue="0.25186810340055821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Rm6-oJ-qFw" secondAttribute="height" multiplier="18:13" id="Pby-s1-ebf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4N-ZV-QTB">
+                                        <rect key="frame" x="29.666666666666686" y="231.33333333333337" width="240" height="43.666666666666686"/>
+                                        <color key="backgroundColor" red="0.84343910819352275" green="0.79397226738858884" blue="0.73562439715867589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Allow">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.3437358069" green="0.32357605350000002" blue="0.29979691870000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="tappedAllowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuU-K0-lv4"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Authorization" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FME-qp-6qJ">
+                                        <rect key="frame" x="5" y="117" width="289.33333333333331" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.18300111007826714" green="0.17287571015698999" blue="0.1620781557729796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will not be able to continue using applications if you do not allow access to the camera" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSn-eG-oTx">
+                                        <rect key="frame" x="8" y="156" width="283.33333333333331" height="50.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.96078431372549022" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="FME-qp-6qJ" firstAttribute="leading" secondItem="gzD-Bf-TaP" secondAttribute="leading" constant="5" id="0Hc-tC-Xhm"/>
+                                    <constraint firstItem="Rm6-oJ-qFw" firstAttribute="centerX" secondItem="gzD-Bf-TaP" secondAttribute="centerX" id="53e-tI-poN"/>
+                                    <constraint firstAttribute="trailing" secondItem="FME-qp-6qJ" secondAttribute="trailing" constant="5" id="CfR-Iq-rpz"/>
+                                    <constraint firstItem="Rm6-oJ-qFw" firstAttribute="width" secondItem="gzD-Bf-TaP" secondAttribute="width" multiplier="0.3" id="Fg9-mQ-kcd"/>
+                                    <constraint firstAttribute="bottom" secondItem="W4N-ZV-QTB" secondAttribute="bottom" constant="15" id="Je0-Z3-LkM"/>
+                                    <constraint firstItem="YSn-eG-oTx" firstAttribute="top" secondItem="FME-qp-6qJ" secondAttribute="bottom" constant="15" id="K7k-tH-yuf"/>
+                                    <constraint firstItem="W4N-ZV-QTB" firstAttribute="width" secondItem="gzD-Bf-TaP" secondAttribute="width" multiplier="0.8" id="L5o-q5-kE9"/>
+                                    <constraint firstItem="W4N-ZV-QTB" firstAttribute="centerX" secondItem="gzD-Bf-TaP" secondAttribute="centerX" id="SyB-bk-cKY"/>
+                                    <constraint firstItem="FME-qp-6qJ" firstAttribute="top" secondItem="Rm6-oJ-qFw" secondAttribute="bottom" constant="22" id="VcK-h3-FLw"/>
+                                    <constraint firstItem="YSn-eG-oTx" firstAttribute="leading" secondItem="gzD-Bf-TaP" secondAttribute="leading" constant="8" id="aLE-UN-BFs"/>
+                                    <constraint firstItem="Rm6-oJ-qFw" firstAttribute="top" secondItem="gzD-Bf-TaP" secondAttribute="top" constant="30" id="dwt-2f-5OU"/>
+                                    <constraint firstAttribute="trailing" secondItem="YSn-eG-oTx" secondAttribute="trailing" constant="8" id="f3w-zh-8Lg"/>
+                                    <constraint firstItem="W4N-ZV-QTB" firstAttribute="top" secondItem="YSn-eG-oTx" secondAttribute="bottom" constant="25" id="hrU-2E-RC3"/>
+                                    <constraint firstItem="W4N-ZV-QTB" firstAttribute="height" secondItem="gzD-Bf-TaP" secondAttribute="height" multiplier="0.15" id="sPg-FI-G1r"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.96078431369999995" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gzD-Bf-TaP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8eh-BD-3j4"/>
+                            <constraint firstItem="gzD-Bf-TaP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="sca-pf-BIg"/>
+                            <constraint firstItem="gzD-Bf-TaP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="yFp-Z2-FGt"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="R9g-U4-hAd"/>
+                    <connections>
+                        <outlet property="allowButton" destination="W4N-ZV-QTB" id="kS0-ek-uBf"/>
+                        <segue destination="cE0-EM-AGj" kind="show" identifier="toCameraSegue" id="o6z-1X-KyI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1931.7757009345794" y="115.98272138228943"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="OPy-Tw-bKx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Camera" id="cE0-EM-AGj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="t94-iO-gSE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CaY-yY-sZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2550.700934579439" y="115.98272138228943"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pT8-4V-EZu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zKp-Zg-kLN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lJ8-L7-pBz">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uF0-Pt-vGT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LB8-1B-dQ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.7757009345794" y="115.98272138228943"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+    </resources>
 </document>

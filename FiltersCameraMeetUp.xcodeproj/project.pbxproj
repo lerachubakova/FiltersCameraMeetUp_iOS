@@ -63,15 +63,47 @@
 		CE66FE94269D6BA30012F465 /* FiltersCameraMeetUp */ = {
 			isa = PBXGroup;
 			children = (
-				CE66FE95269D6BA30012F465 /* AppDelegate.swift */,
-				CE66FE97269D6BA30012F465 /* SceneDelegate.swift */,
-				CE66FE99269D6BA30012F465 /* ViewController.swift */,
-				CE66FE9B269D6BA30012F465 /* Main.storyboard */,
-				CE66FE9E269D6BA50012F465 /* Assets.xcassets */,
-				CE66FEA0269D6BA50012F465 /* LaunchScreen.storyboard */,
 				CE66FEA3269D6BA50012F465 /* Info.plist */,
+				CE66FEAA269D8A750012F465 /* Application */,
+				CE66FEAB269D8A960012F465 /* Modules */,
+				CE66FEAD269D8AF80012F465 /* Resources */,
 			);
 			path = FiltersCameraMeetUp;
+			sourceTree = "<group>";
+		};
+		CE66FEAA269D8A750012F465 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CE66FE95269D6BA30012F465 /* AppDelegate.swift */,
+				CE66FE97269D6BA30012F465 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CE66FEAB269D8A960012F465 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE66FEA0269D6BA50012F465 /* LaunchScreen.storyboard */,
+				CE66FEAC269D8AA70012F465 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CE66FEAC269D8AA70012F465 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE66FE9B269D6BA30012F465 /* Main.storyboard */,
+				CE66FE99269D6BA30012F465 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE66FEAD269D8AF80012F465 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE66FE9E269D6BA50012F465 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		DD0C49A456EA14F2CC727A60 /* Frameworks */ = {

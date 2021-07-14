@@ -20,23 +20,50 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <gestureRecognizers/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vc-GC-W8o">
+                                <rect key="frame" x="161.5" y="756" width="91" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0Vc-GC-W8o" secondAttribute="height" multiplier="1:1" id="Lje-Zl-5bY"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="icCameraButton"/>
+                                <connections>
+                                    <action selector="tappedCameraButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mch-0W-opU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NwG-Tj-XtR" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="4pZ-zC-SJ5"/>
                             <constraint firstItem="NwG-Tj-XtR" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="Aaa-vi-d7k"/>
+                            <constraint firstItem="0Vc-GC-W8o" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Glg-Kz-ech"/>
                             <constraint firstItem="NwG-Tj-XtR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="LgW-xo-yuw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0Vc-GC-W8o" secondAttribute="bottom" constant="15" id="OvM-1i-IE5"/>
                             <constraint firstAttribute="bottom" secondItem="NwG-Tj-XtR" secondAttribute="bottom" id="WVP-iu-2n5"/>
+                            <constraint firstItem="0Vc-GC-W8o" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.22" id="ozo-EU-Isy"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraImageView" destination="NwG-Tj-XtR" id="bvJ-xO-3Qw"/>
+                        <segue destination="UAj-9d-x71" kind="show" identifier="toPhotoVCSegue" id="tAm-CR-P5i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>
         </scene>
+        <!--Photo-->
+        <scene sceneID="qDx-XA-59i">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Photo" id="UAj-9d-x71" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ggo-7s-5Pd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOG-W2-xc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634" y="94"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="icCameraButton" width="512" height="512"/>
+    </resources>
 </document>

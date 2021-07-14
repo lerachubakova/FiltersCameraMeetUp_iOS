@@ -36,13 +36,13 @@ class CameraViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureAppearance()
         setupSession()
         addGestureRecognizer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        configureNavigationBar()
         DispatchQueue.main.async { [weak self] in
             self?.sessionManager.startRunning()
         }
@@ -54,9 +54,20 @@ class CameraViewController: UIViewController {
             self?.sessionManager.stopRunning()
         }
     }
+    
+    // MARK: - Navigation
+    private func goToPhoto() {
+        self.performSegue(withIdentifier: "toPhotoVCSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPhotoVCSegue", let photoVC = segue.destination as? PhotoViewController {
+            photoVC.setImage(img: cameraImageView.image)
+        }
+    }
  
     // MARK: - Setup
-    private func configureAppearance() {
+    private func configureNavigationBar() {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
@@ -79,6 +90,10 @@ class CameraViewController: UIViewController {
     // MARK: - @IBActions
     @IBAction private func tappedImageView(_ sender: UITapGestureRecognizer) {
         changeFilter()
+    }
+    
+    @IBAction private func tappedCameraButton(_ sender: Any) {
+        self.goToPhoto()
     }
 }
 

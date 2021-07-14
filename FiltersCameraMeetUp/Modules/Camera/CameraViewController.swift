@@ -37,22 +37,17 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSession()
-        addGestureRecognizer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationBar()
-        DispatchQueue.main.async { [weak self] in
-            self?.sessionManager.startRunning()
-        }
+        self.sessionManager.startRunning()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        DispatchQueue.main.async { [weak self] in
-            self?.sessionManager.stopRunning()
-        }
+        self.sessionManager.stopRunning()
     }
     
     // MARK: - Navigation
@@ -67,17 +62,12 @@ class CameraViewController: UIViewController {
     }
  
     // MARK: - Setup
-    private func configureNavigationBar() {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
     private func setupSession() {
         sessionManager.getVideoOutput().setSampleBufferDelegate(self, queue: sessionManager.getOutputQueue())
     }
     
-    private func addGestureRecognizer() {
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedImageView(_:)))
-        view.addGestureRecognizer(tapGestureRecognizer)
+    private func configureNavigationBar() {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: - Logic
@@ -88,12 +78,12 @@ class CameraViewController: UIViewController {
     }
     
     // MARK: - @IBActions
-    @IBAction private func tappedImageView(_ sender: UITapGestureRecognizer) {
+    @IBAction private func tappedChangeFilterButton(_ sender: Any) {
         changeFilter()
     }
     
     @IBAction private func tappedCameraButton(_ sender: Any) {
-        self.goToPhoto()
+        goToPhoto()
     }
 }
 

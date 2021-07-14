@@ -15,8 +15,6 @@ class SessionManager: NSObject {
     private var videoConnection: AVCaptureConnection?
     private let outputQueue = DispatchQueue(label: "com.chubakova.output", attributes: [])
 
-    // MARK: - Methods
-
     func getOutputQueue() -> DispatchQueue {
         return outputQueue
     }

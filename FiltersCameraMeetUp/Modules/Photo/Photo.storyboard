@@ -30,6 +30,13 @@
                             <constraint firstAttribute="trailing" secondItem="Apl-bp-99K" secondAttribute="trailing" id="uWY-al-ciC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="TOY-Nc-NKi">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Fba-Om-HOe">
+                            <connections>
+                                <action selector="tappedSaveButton:" destination="Y6W-OH-hqX" id="hDc-HA-ypJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoImageView" destination="Apl-bp-99K" id="Goe-hq-EKT"/>
                     </connections>

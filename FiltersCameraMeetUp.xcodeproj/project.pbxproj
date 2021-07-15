@@ -98,9 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				CE66FEA0269D6BA50012F465 /* LaunchScreen.storyboard */,
-				CE66FEAF269D921B0012F465 /* CameraAuthorizationManager.swift */,
-				CEEDD42E26A01085007E9C74 /* MicrophoneAuthorizationManager.swift */,
 				CE66FEB6269DB2E60012F465 /* SessionManager.swift */,
+				CEEDD43026A0192E007E9C74 /* AuthorizationManagers */,
 				CE66FEB1269DA7390012F465 /* Camera */,
 				CE66FEAC269D8AA70012F465 /* Main */,
 				CE677077269EBA7D00FDACB1 /* Photo */,
@@ -141,6 +140,15 @@
 				CE67707A269EBAD200FDACB1 /* PhotoViewController.swift */,
 			);
 			path = Photo;
+			sourceTree = "<group>";
+		};
+		CEEDD43026A0192E007E9C74 /* AuthorizationManagers */ = {
+			isa = PBXGroup;
+			children = (
+				CEEDD42E26A01085007E9C74 /* MicrophoneAuthorizationManager.swift */,
+				CE66FEAF269D921B0012F465 /* CameraAuthorizationManager.swift */,
+			);
+			path = AuthorizationManagers;
 			sourceTree = "<group>";
 		};
 		DD0C49A456EA14F2CC727A60 /* Frameworks */ = {

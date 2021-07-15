@@ -58,6 +58,9 @@ class PhotoViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        if PHLibraryAuthorizationManager.getPhotoLibraryAuthorizationStatus() != .granted {
+            self.navigationItem.rightBarButtonItems?.removeAll()
+        }
     }
     
     private func configurePhotoScreen() {
@@ -150,6 +153,10 @@ class PhotoViewController: UIViewController {
             }
         }
     }
+    
+    private func saveImageInLibrary(_ img: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(img, self, #selector(saveImageError), nil)
+    }
 
     // MARK: - @IBActions
     @objc private func saveImageError(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
@@ -164,7 +171,7 @@ class PhotoViewController: UIViewController {
         switch postType {
         case .photo:
             guard let img = photo else { return }
-            UIImageWriteToSavedPhotosAlbum(img, self, #selector(saveImageError), nil)
+            saveImageInLibrary(img)
         case .video:
             guard let inputURL = videoURL else { return }
             if let filter = filter {

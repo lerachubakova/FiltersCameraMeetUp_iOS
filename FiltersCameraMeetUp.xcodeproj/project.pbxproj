@@ -20,6 +20,7 @@
 		CE677079269EBA9900FDACB1 /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE677078269EBA9900FDACB1 /* Photo.storyboard */; };
 		CE67707B269EBAD200FDACB1 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67707A269EBAD200FDACB1 /* PhotoViewController.swift */; };
 		CEEDD42F26A01085007E9C74 /* MicrophoneAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDD42E26A01085007E9C74 /* MicrophoneAuthorizationManager.swift */; };
+		CEEDD43226A03AAE007E9C74 /* PHLibraryAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDD43126A03AAE007E9C74 /* PHLibraryAuthorizationManager.swift */; };
 		DFC2BBB8B2C11F4A8188DC74 /* Pods_FiltersCameraMeetUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1D63372E2EE62009E357FE /* Pods_FiltersCameraMeetUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		CE677078269EBA9900FDACB1 /* Photo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photo.storyboard; sourceTree = "<group>"; };
 		CE67707A269EBAD200FDACB1 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		CEEDD42E26A01085007E9C74 /* MicrophoneAuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophoneAuthorizationManager.swift; sourceTree = "<group>"; };
+		CEEDD43126A03AAE007E9C74 /* PHLibraryAuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHLibraryAuthorizationManager.swift; sourceTree = "<group>"; };
 		D94950573950B4EBE3000B9A /* Pods-FiltersCameraMeetUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiltersCameraMeetUp.debug.xcconfig"; path = "Target Support Files/Pods-FiltersCameraMeetUp/Pods-FiltersCameraMeetUp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 		CEEDD43026A0192E007E9C74 /* AuthorizationManagers */ = {
 			isa = PBXGroup;
 			children = (
+				CEEDD43126A03AAE007E9C74 /* PHLibraryAuthorizationManager.swift */,
 				CEEDD42E26A01085007E9C74 /* MicrophoneAuthorizationManager.swift */,
 				CE66FEAF269D921B0012F465 /* CameraAuthorizationManager.swift */,
 			);
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEDD43226A03AAE007E9C74 /* PHLibraryAuthorizationManager.swift in Sources */,
 				CE66FEB0269D921B0012F465 /* CameraAuthorizationManager.swift in Sources */,
 				CE66FEB5269DAE460012F465 /* CameraViewController.swift in Sources */,
 				CE66FEB7269DB2E70012F465 /* SessionManager.swift in Sources */,

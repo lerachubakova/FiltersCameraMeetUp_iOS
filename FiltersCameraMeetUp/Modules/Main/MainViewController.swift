@@ -10,12 +10,14 @@ import UIKit
 enum Authorization {
     case camera
     case microphone
+    case library
 }
 
 class MainViewController: UIViewController {
     // MARK: - @IBOutlets
     @IBOutlet private weak var authImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet private weak var allowButton: UIButton!
     
     private var authorization: Authorization = .camera
@@ -41,15 +43,21 @@ class MainViewController: UIViewController {
         allowButton.layer.shadowOpacity = 0.3
         allowButton.layer.masksToBounds = false
         allowButton.layer.shadowOffset = CGSize(width: 5, height: 10)
+        print(" camera: \(CameraAuthorizationManager.getCameraAuthorizationStatus())")
+        print(" micro: \(MicrophoneAuthorizationManager.getMicrophoneAuthorizationStatus())")
+        print(" library: \(PHLibraryAuthorizationManager.getPhotoLibraryAuthorizationStatus())")
         
         if CameraAuthorizationManager.getCameraAuthorizationStatus() == .unauthorized {
             configureAllowButtonForDisabled()
         } else if CameraAuthorizationManager.getCameraAuthorizationStatus() == .granted {
-            if MicrophoneAuthorizationManager.getMicrophoneAuthorizationStatus() == .unauthorized {
-                configureAllowButtonForDisabled()
-            }
             authorization = .microphone
             configureMicrophoneView()
+            if MicrophoneAuthorizationManager.getMicrophoneAuthorizationStatus() == .unauthorized {
+                configureAllowButtonForDisabled()
+            } else if MicrophoneAuthorizationManager.getMicrophoneAuthorizationStatus() == .granted {
+                configureLibraryView()
+                authorization = .library
+            }
         }
     }
     
@@ -61,6 +69,13 @@ class MainViewController: UIViewController {
     func configureMicrophoneView() {
         titleLabel.text = "Microphone Authorization"
         authImageView.image = UIImage(systemName: "mic")
+        messageLabel.text = "You will not be able to continue using applications if you do not allow access to the microphone"
+    }
+    
+    func configureLibraryView() {
+        titleLabel.text = "Library Authorization"
+        authImageView.image = UIImage(systemName: "photo.on.rectangle.angled")
+        messageLabel.text = "You can allow access to the library to save your photos and videos"
     }
     
     func openSettings() {
@@ -76,7 +91,6 @@ class MainViewController: UIViewController {
             case .granted:
                 self?.configureMicrophoneView()
                 self?.authorization = .microphone
-                // self?.goToCamera()
             case .notRequested:
                 break
             case .unauthorized:
@@ -89,11 +103,25 @@ class MainViewController: UIViewController {
         MicrophoneAuthorizationManager.requestMicrophoneAuthorization { [weak self] status in
             switch status {
             case .granted:
-                self?.goToCamera()
+                self?.configureLibraryView()
+                self?.authorization = .library
             case .notRequested:
                 break
             case .unauthorized:
                 self?.configureAllowButtonForDisabled()
+            }
+        }
+    }
+    
+    func makePHLibraryRequest() {
+        PHLibraryAuthorizationManager.requestPhotoLibraryAuthorization { [weak self] status in
+            switch status {
+            case .granted,.unauthorized:
+                DispatchQueue.main.async {
+                    self?.goToCamera()
+                }
+            case .notRequested:
+                break
             }
         }
     }
@@ -104,7 +132,7 @@ class MainViewController: UIViewController {
         case .camera:
             switch CameraAuthorizationManager.getCameraAuthorizationStatus() {
             case .granted:
-                configureMicrophoneView()
+                break
             case .notRequested:
                 makeCameraRequest()
             case .unauthorized:
@@ -118,6 +146,13 @@ class MainViewController: UIViewController {
                 makeMicrophoneRequest()
             case .unauthorized:
                 openSettings()
+            }
+        case .library:
+            switch PHLibraryAuthorizationManager.getPhotoLibraryAuthorizationStatus() {
+            case .granted, .unauthorized:
+               break
+            case .notRequested:
+                makePHLibraryRequest()
             }
         }
      

@@ -48,7 +48,7 @@
                                         <color key="textColor" red="0.18300111007826714" green="0.17287571015698999" blue="0.1620781557729796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will not be able to continue using applications if you do not allow access to the camera and microphone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSn-eG-oTx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will not be able to continue using applications if you do not allow access to the camera" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSn-eG-oTx">
                                         <rect key="frame" x="8" y="156" width="283.33333333333331" height="50.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
@@ -91,6 +91,7 @@
                     <connections>
                         <outlet property="allowButton" destination="W4N-ZV-QTB" id="kS0-ek-uBf"/>
                         <outlet property="authImageView" destination="Rm6-oJ-qFw" id="M8O-a1-lHR"/>
+                        <outlet property="messageLabel" destination="YSn-eG-oTx" id="RV0-vH-EIQ"/>
                         <outlet property="titleLabel" destination="FME-qp-6qJ" id="frk-Hp-qUh"/>
                         <segue destination="cE0-EM-AGj" kind="show" identifier="toCameraSegue" id="o6z-1X-KyI"/>
                     </connections>

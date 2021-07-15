@@ -21,7 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        
         var vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AllowCameraViewController")
 
-        if CameraAuthorizationManager.getCameraAuthorizationStatus() == .granted && MicrophoneAuthorizationManager.getMicrophoneAuthorizationStatus() == .granted {
+        let isCamerGranted = CameraAuthorizationManager.getCameraAuthorizationStatus() == .granted
+        let isMicrophoneGranted = MicrophoneAuthorizationManager.getMicrophoneAuthorizationStatus() == .granted
+        let isLibraryRequested = PHLibraryAuthorizationManager.getPhotoLibraryAuthorizationStatus() != .notRequested
+        if isCamerGranted && isMicrophoneGranted && isLibraryRequested {
            vc = UIStoryboard(name: "Camera", bundle: nil).instantiateViewController(identifier: "CameraViewController")
         }
 

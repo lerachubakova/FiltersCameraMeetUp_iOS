@@ -27,8 +27,9 @@ class SessionManager: NSObject {
     private var videoConnection: AVCaptureConnection?
     private var audioConnection: AVCaptureConnection?
     
-    private let outputQueue = DispatchQueue(label: "com.chubakova.output", attributes: [])
-   
+    private let videoOutputQueue = DispatchQueue(label: "com.chubakova.video.output", attributes: [])
+    private let audioOutputQueue = DispatchQueue(label: "com.chubakova.video.output", attributes: [])
+    
     private var outputURL: URL!
     
     // MARK: - Methods
@@ -40,8 +41,12 @@ class SessionManager: NSObject {
         return audioConnection
     }
     
-    func getOutputQueue() -> DispatchQueue {
-        return outputQueue
+    func getVideoOutputQueue() -> DispatchQueue {
+        return videoOutputQueue
+    }
+    
+    func getAudioOutputQueue() -> DispatchQueue {
+        return audioOutputQueue
     }
     
     func getSession() -> AVCaptureSession {

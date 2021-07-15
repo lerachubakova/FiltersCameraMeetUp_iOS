@@ -79,8 +79,8 @@ class CameraViewController: UIViewController {
  
     // MARK: - Setup
     private func setupSession() {
-        sessionManager.getVideoOutput().setSampleBufferDelegate(self, queue: sessionManager.getOutputQueue())
-        sessionManager.getAudioOutput().setSampleBufferDelegate(self, queue: sessionManager.getOutputQueue())
+        sessionManager.getVideoOutput().setSampleBufferDelegate(self, queue: sessionManager.getVideoOutputQueue())
+        sessionManager.getAudioOutput().setSampleBufferDelegate(self, queue: sessionManager.getAudioOutputQueue())
     }
     
     private func configureNavigationBar() {
@@ -230,13 +230,18 @@ extension CameraViewController: AVCaptureAudioDataOutputSampleBufferDelegate, AV
         
         guard videoStarted else { return }
         objc_sync_enter(self)
-        sessionManager.getOutputQueue().async { [weak self] in
+        sessionManager.getVideoOutputQueue().async { [weak self] in
             guard let self = self else { return }
             if connection == self.sessionManager.getVideoConnection() {
                 if let videoWriterInput = self.videoWriterInput, videoWriterInput.isReadyForMoreMediaData {
                     videoWriterInput.append(sampleBuffer)
                 }
-            } else if connection == self.sessionManager.getAudioConnection() {
+            }
+        }
+        
+        sessionManager.getAudioOutputQueue().async { [weak self] in
+            guard let self = self else { return }
+            if connection == self.sessionManager.getAudioConnection() {
                 if let audioWriterInput = self.audioWriterInput, audioWriterInput.isReadyForMoreMediaData {
                     audioWriterInput.append(sampleBuffer)
                 }

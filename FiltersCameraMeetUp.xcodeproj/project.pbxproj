@@ -19,6 +19,7 @@
 		CE66FEB7269DB2E70012F465 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66FEB6269DB2E60012F465 /* SessionManager.swift */; };
 		CE677079269EBA9900FDACB1 /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE677078269EBA9900FDACB1 /* Photo.storyboard */; };
 		CE67707B269EBAD200FDACB1 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67707A269EBAD200FDACB1 /* PhotoViewController.swift */; };
+		CEEDD42F26A01085007E9C74 /* MicrophoneAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDD42E26A01085007E9C74 /* MicrophoneAuthorizationManager.swift */; };
 		DFC2BBB8B2C11F4A8188DC74 /* Pods_FiltersCameraMeetUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1D63372E2EE62009E357FE /* Pods_FiltersCameraMeetUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		CE66FEB6269DB2E60012F465 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		CE677078269EBA9900FDACB1 /* Photo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photo.storyboard; sourceTree = "<group>"; };
 		CE67707A269EBAD200FDACB1 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		CEEDD42E26A01085007E9C74 /* MicrophoneAuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophoneAuthorizationManager.swift; sourceTree = "<group>"; };
 		D94950573950B4EBE3000B9A /* Pods-FiltersCameraMeetUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiltersCameraMeetUp.debug.xcconfig"; path = "Target Support Files/Pods-FiltersCameraMeetUp/Pods-FiltersCameraMeetUp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 			children = (
 				CE66FEA0269D6BA50012F465 /* LaunchScreen.storyboard */,
 				CE66FEAF269D921B0012F465 /* CameraAuthorizationManager.swift */,
+				CEEDD42E26A01085007E9C74 /* MicrophoneAuthorizationManager.swift */,
 				CE66FEB6269DB2E60012F465 /* SessionManager.swift */,
 				CE66FEB1269DA7390012F465 /* Camera */,
 				CE66FEAC269D8AA70012F465 /* Main */,
@@ -280,6 +283,7 @@
 				CE67707B269EBAD200FDACB1 /* PhotoViewController.swift in Sources */,
 				CE66FE96269D6BA30012F465 /* AppDelegate.swift in Sources */,
 				CE66FE98269D6BA30012F465 /* SceneDelegate.swift in Sources */,
+				CEEDD42F26A01085007E9C74 /* MicrophoneAuthorizationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        
         var vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AllowCameraViewController")
 
-        if CameraAuthorizationManager.getCameraAuthorizationStatus() == .granted {
+        if CameraAuthorizationManager.getCameraAuthorizationStatus() == .granted && MicrophoneAuthorizationManager.getMicrophoneAuthorizationStatus() == .granted {
            vc = UIStoryboard(name: "Camera", bundle: nil).instantiateViewController(identifier: "CameraViewController")
         }
 

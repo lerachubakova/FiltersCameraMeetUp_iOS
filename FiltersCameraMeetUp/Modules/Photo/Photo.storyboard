@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tu1-XW-jYb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Apl-bp-99K">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
@@ -24,8 +28,12 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Tu1-XW-jYb" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="3ee-P5-1E2"/>
                             <constraint firstItem="Apl-bp-99K" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Fms-yG-jy6"/>
+                            <constraint firstItem="Tu1-XW-jYb" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="J2f-cx-mOm"/>
                             <constraint firstItem="Apl-bp-99K" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Mxe-cf-ebr"/>
+                            <constraint firstItem="Tu1-XW-jYb" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="U7F-Zo-Ou5"/>
+                            <constraint firstAttribute="bottom" secondItem="Tu1-XW-jYb" secondAttribute="bottom" id="gfj-or-vZA"/>
                             <constraint firstAttribute="bottom" secondItem="Apl-bp-99K" secondAttribute="bottom" id="oHm-Iw-1Q2"/>
                             <constraint firstAttribute="trailing" secondItem="Apl-bp-99K" secondAttribute="trailing" id="uWY-al-ciC"/>
                         </constraints>
@@ -39,6 +47,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="photoImageView" destination="Apl-bp-99K" id="Goe-hq-EKT"/>
+                        <outlet property="videoPlayerView" destination="Tu1-XW-jYb" id="MU8-WX-ycb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

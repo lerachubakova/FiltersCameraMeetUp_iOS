@@ -22,12 +22,14 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vc-GC-W8o" userLabel="Camera Button">
                                 <rect key="frame" x="161.5" y="756" width="91" height="91"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0Vc-GC-W8o" secondAttribute="height" multiplier="1:1" id="Lje-Zl-5bY"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="icCameraButton"/>
                                 <connections>
                                     <action selector="tappedCameraButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mch-0W-opU"/>
+                                    <outletCollection property="gestureRecognizers" destination="Jxz-6j-0RV" appends="YES" id="uuh-5S-8Ia"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMT-DY-sTm" userLabel="Filter Button">
@@ -58,10 +60,16 @@
                     </view>
                     <connections>
                         <outlet property="cameraImageView" destination="NwG-Tj-XtR" id="bvJ-xO-3Qw"/>
+                        <outlet property="recordButton" destination="0Vc-GC-W8o" id="8Hc-Mb-OHl"/>
                         <segue destination="UAj-9d-x71" kind="show" identifier="toPhotoVCSegue" id="tAm-CR-P5i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.29999999999999999" id="Jxz-6j-0RV">
+                    <connections>
+                        <action selector="longTappedForVideo:" destination="Y6W-OH-hqX" id="QuB-Iv-VWY"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>
         </scene>

@@ -227,6 +227,7 @@ extension CameraViewController: AVCaptureAudioDataOutputSampleBufferDelegate, AV
                 self.cameraImageView.image = UIImage(cgImage: finalImage)
             }
         }
+        
         guard videoStarted else { return }
         objc_sync_enter(self)
         sessionManager.getOutputQueue().async { [weak self] in

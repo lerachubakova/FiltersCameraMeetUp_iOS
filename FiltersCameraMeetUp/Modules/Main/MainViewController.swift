@@ -43,9 +43,9 @@ class MainViewController: UIViewController {
         allowButton.layer.shadowOpacity = 0.3
         allowButton.layer.masksToBounds = false
         allowButton.layer.shadowOffset = CGSize(width: 5, height: 10)
-        print(" camera: \(CameraAuthorizationManager.getCameraAuthorizationStatus())")
-        print(" micro: \(MicrophoneAuthorizationManager.getMicrophoneAuthorizationStatus())")
-        print(" library: \(PHLibraryAuthorizationManager.getPhotoLibraryAuthorizationStatus())")
+//        print(" camera: \(CameraAuthorizationManager.getCameraAuthorizationStatus())")
+//        print(" micro: \(MicrophoneAuthorizationManager.getMicrophoneAuthorizationStatus())")
+//        print(" library: \(PHLibraryAuthorizationManager.getPhotoLibraryAuthorizationStatus())")
         
         if CameraAuthorizationManager.getCameraAuthorizationStatus() == .unauthorized {
             configureAllowButtonForDisabled()

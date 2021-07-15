@@ -145,11 +145,16 @@ class PhotoViewController: UIViewController {
     private func saveVideoInLibrary(url: URL) {
         PHPhotoLibrary.shared().performChanges {
             PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
-        } completionHandler: { (_, error) in
+        } completionHandler: { [weak self] (_, error) in
             if let error = error {
+                DispatchQueue.main.async { 
+                    self?.showStandartAlert(title: "Error", message: "Your video wasn't saved")
+                }
                 print("saveVideoInLibrary: \(error.localizedDescription)")
             } else {
-                print("saveVideoInLibrary: saved successful")
+                DispatchQueue.main.async {
+                    self?.showStandartAlert(message: "Your video saved successful")
+                }
             }
         }
     }
@@ -157,13 +162,22 @@ class PhotoViewController: UIViewController {
     private func saveImageInLibrary(_ img: UIImage) {
         UIImageWriteToSavedPhotosAlbum(img, self, #selector(saveImageError), nil)
     }
+    
+    private func showStandartAlert(title: String? = "Notification", message: String? = nil) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.view.tintColor = UIColor.black
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
 
     // MARK: - @IBActions
     @objc private func saveImageError(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
+            self.showStandartAlert(title: "Error", message: "Your image wasn't saved")
             print("saveImageError: \(error.localizedDescription)")
         } else {
-            print("saveImageError: saved successful")
+            self.showStandartAlert(message: "Your image saved successful")
         }
     }
     

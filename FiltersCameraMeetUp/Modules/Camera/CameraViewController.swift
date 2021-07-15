@@ -10,6 +10,7 @@ import UIKit
 
 class CameraViewController: UIViewController {
     // MARK: - @IBOutlets
+    @IBOutlet private weak var filterButton: UIButton!
     @IBOutlet private weak var recordButton: UIButton!
     @IBOutlet private weak var cameraImageView: UIImageView!
     
@@ -194,9 +195,11 @@ class CameraViewController: UIViewController {
             break
         case .began:
             startVideo()
+            filterButton.isHidden = true
             recordButton.setImage(UIImage(named: "icCameraButtonHighlighted"), for: .normal)
         case .ended:
             stopVideo()
+            filterButton.isHidden = false
             recordButton.setImage(UIImage(named: "icCameraButton"), for: .normal)
         @unknown default:
             break

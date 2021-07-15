@@ -60,6 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="cameraImageView" destination="NwG-Tj-XtR" id="bvJ-xO-3Qw"/>
+                        <outlet property="filterButton" destination="wMT-DY-sTm" id="6cV-za-wYa"/>
                         <outlet property="recordButton" destination="0Vc-GC-W8o" id="8Hc-Mb-OHl"/>
                         <segue destination="UAj-9d-x71" kind="show" identifier="toPhotoVCSegue" id="tAm-CR-P5i"/>
                     </connections>

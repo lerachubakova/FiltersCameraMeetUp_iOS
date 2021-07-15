@@ -24,9 +24,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAppearance()
-        print("cameraStatus: \(CameraAuthorizationManager.getCameraAuthorizationStatus())")
-        print("microphoneStatus: \(MicrophoneAuthorizationManager.getMicrophoneAuthorizationStatus())")
-        print("auth: \(authorization)")
+//        print("cameraStatus: \(CameraAuthorizationManager.getCameraAuthorizationStatus())")
+//        print("microphoneStatus: \(MicrophoneAuthorizationManager.getMicrophoneAuthorizationStatus())")
+//        print("auth: \(authorization)")
     }
     
     // MARK: - Navigation

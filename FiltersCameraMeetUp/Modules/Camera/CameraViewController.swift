@@ -42,12 +42,12 @@ class CameraViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationBar()
-        self.sessionManager.startRunning()
+        startSession()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.sessionManager.stopRunning()
+        stopSession()
     }
     
     // MARK: - Navigation
@@ -75,6 +75,18 @@ class CameraViewController: UIViewController {
         let index = (filterIndex + 1) % CIFilterNames.count
         filterIndex = index
         filterName = CIFilterNames[index]
+    }
+    
+    private func startSession() {
+        DispatchQueue.main.async { [weak self] in
+            self?.sessionManager.startRunning()
+        }
+    }
+    
+    private func stopSession() {
+        DispatchQueue.main.async { [weak self] in
+            self?.sessionManager.stopRunning()
+        }
     }
     
     // MARK: - @IBActions

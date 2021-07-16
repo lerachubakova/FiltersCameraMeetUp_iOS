@@ -131,13 +131,10 @@ class PhotoViewController: UIViewController {
         exporter.videoComposition = composition
 
         exporter.exportAsynchronously { [weak self] in
-            switch exporter.status {
-            case .unknown, .waiting, .exporting, .failed, .cancelled:
-                print("saveFilteredVideoInDirectoryAndLibrary: exportAsynchronously: status not completed")
-            case .completed:
+            if exporter.status == .completed {
                 self?.saveVideoInLibrary(url: exportURL)
-            @unknown default:
-                fatalError()
+            } else {
+                print("saveFilteredVideoInDirectoryAndLibrary: exportAsynchronously: status not completed")
             }
         }
     }
